@@ -1,13 +1,11 @@
 "use strict";
 // ---------- Частина 1: Визначення типів та інтерфейсів ----------
-// Enum для типів героїв
 var HeroType;
 (function (HeroType) {
     HeroType["Warrior"] = "WARRIOR";
     HeroType["Mage"] = "MAGE";
     HeroType["Archer"] = "ARCHER";
 })(HeroType || (HeroType = {}));
-// Enum для типів атак
 var AttackType;
 (function (AttackType) {
     AttackType["Physical"] = "PHYSICAL";
@@ -15,7 +13,6 @@ var AttackType;
     AttackType["Ranged"] = "RANGED";
 })(AttackType || (AttackType = {}));
 // ---------- Частина 2: Функції ----------
-// Функція створення нового героя
 function createHero(name, type) {
     let baseStats;
     let attackType;
@@ -129,4 +126,3 @@ console.log("----- Список всіх героїв -----");
 heroes.forEach(h => {
     console.log(`${h.name} (${h.type}): ${h.stats.health} HP, Живий: ${h.isAlive}`);
 });
-// Код можна зберегти у файл .ts та скомпілювати за допомогою TypeScript (команда "tsc filename.ts")  
